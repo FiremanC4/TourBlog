@@ -1,0 +1,148 @@
+.profile-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.profile-sidebar {
+  width: 50ch;
+  background-color: var(--header-element-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.167);
+  text-align: center;
+}
+
+.profile-sidebar h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-sidebar p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.new-post-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--base-background-color);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.new-post-btn:hover {
+  background-color: var(--base-background-color-lighter);
+}
+
+.logout-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #ff4444;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.logout-btn:hover {
+  background-color: #cc0000;
+}
+
+.article-container {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.article-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background-color: #ffd700;
+}
+
+.delete-btn {
+  background-color: #ff4500;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #e6c200;
+}
+
+.delete-btn:hover {
+  background-color: #cc3700;
+}
+
+@media (max-width: 900px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-sidebar {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  .article-container {
+    width: 100%;
+  }
+}
+
+.skeleton-info {
+  margin-bottom: 20px;
+}
+
+.skeleton-text {
+  width: 100%;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-button {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}

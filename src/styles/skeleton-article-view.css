@@ -1,0 +1,153 @@
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 0.5rem;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.article-view-container .skeleton {
+  opacity: 0.7;
+}
+
+.article-content.skeleton {
+  width: 70%;
+  padding: 2rem;
+  background-color: var(--header-element-color);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.167);
+}
+
+.article-gallery.skeleton {
+  text-align: center;
+}
+
+.gallery-img.skeleton {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 1rem;
+}
+
+.gallery-thumbnails.skeleton {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.thumbnail-img.skeleton {
+  width: 80px;
+  height: 80px;
+  border-radius: 0.5rem;
+}
+
+.article-view-title.skeleton {
+  width: 80%;
+  height: 3rem;
+  margin: 1.5rem auto;
+}
+
+.article-likes.skeleton {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.article-like-button.skeleton {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.article-like-counter.skeleton {
+  width: 2rem;
+  height: 1.4rem;
+  margin-left: 0.5rem;
+}
+
+.article-text.skeleton {
+  margin-top: 2rem;
+}
+
+.text-line.skeleton {
+  width: 100%;
+  height: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.comments-section.skeleton {
+  width: 25%;
+  padding: 2rem;
+  background-color: var(--header-element-color);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.167);
+}
+
+.comments-title.skeleton {
+  width: 50%;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.comments-container.skeleton {
+  margin-bottom: 2rem;
+}
+
+.comment.skeleton {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(230, 255, 241, 0.1);
+  border-radius: 0.5rem;
+}
+
+.comment-author.skeleton {
+  width: 30%;
+  height: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.comment-text.skeleton {
+  width: 100%;
+  height: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.comment-date.skeleton {
+  width: 40%;
+  height: 1rem;
+}
+
+.comment-form.skeleton {
+  margin-top: 2rem;
+}
+
+.comment-textarea.skeleton {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.comment-submit.skeleton {
+  width: 100%;
+  height: 3rem;
+}
+
+@media (max-width: 900px) {
+  .article-content.skeleton,
+  .comments-section.skeleton {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}

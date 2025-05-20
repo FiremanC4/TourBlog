@@ -1,0 +1,50 @@
+.help-container {
+  padding: 2rem;
+  margin: 1.3rem;
+}
+
+.help-content {
+  background-color: var(--header-element-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.167);
+}
+
+.help-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--base-font-color);
+}
+
+.help-section {
+  margin-bottom: 2rem;
+}
+
+.help-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--base-font-color);
+}
+
+.help-section p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--base-font-color);
+}
+
+.help-section ul,
+.help-section ol {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  padding-left: 2rem;
+  color: var(--base-font-color);
+}
+
+.help-section li {
+  margin-bottom: 1rem;
+}
+
+.help-section strong {
+  color: var(--base-background-color);
+}
