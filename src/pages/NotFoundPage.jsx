@@ -7,13 +7,13 @@ const NotFoundPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="page-container" style={{ textAlign: "center", marginTop: "50px" }}>
+    <div
+      className="page-container"
+      style={{ textAlign: "center", marginTop: "50px" }}
+    >
       <h1 className="error-title">404</h1>
       <p className="error-message">Page Not Found</p>
-      <button
-        onClick={() => navigate("/")}
-        className="btn-primary"
-      >
+      <button onClick={() => navigate("/")} className="btn-primary">
         Go to Home Page
       </button>
     </div>

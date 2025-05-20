@@ -18,7 +18,6 @@ export const doCreateUserWithEmailAndPassword = async (email, password) => {
   );
   const token = await userCredential.user.getIdToken();
 
-  // Send token to backend
   await axios.post(`${API_CONFIG.BASE_URL}/auth/register`, { token });
 
   return userCredential;
@@ -32,7 +31,6 @@ export const doSignInWithEmailAndPassword = async (email, password) => {
   );
   const token = await userCredential.user.getIdToken();
 
-  // Send token to backend
   await axios.post(`${API_CONFIG.BASE_URL}/auth/login`, { token });
 
   return userCredential;
@@ -43,7 +41,6 @@ export const doSignInWithGoogle = async () => {
   const userCredential = await signInWithPopup(auth, provider);
   const token = await userCredential.user.getIdToken();
 
-  // Send token to backend
   await axios.post(`${API_CONFIG.BASE_URL}/auth/google`, { token });
 
   return userCredential;

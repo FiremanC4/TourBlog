@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/authContext";
 import { getImageUrl } from "../utils/static";
-// import "../styles/header-footer.css";
 
 function Header({ title, sort, sortValue, onSortChange }) {
   const { userLoggedIn } = useAuth();
@@ -10,7 +9,11 @@ function Header({ title, sort, sortValue, onSortChange }) {
     <header className="header">
       <div className="top-header">
         <Link className="site-title" to="/">
-          <img src={getImageUrl("icons/icon.png")} alt="Logo" className="site-logo" />
+          <img
+            src={getImageUrl("icons/icon.png")}
+            alt="Logo"
+            className="site-logo"
+          />
           <p className="site-name">TourBlog</p>
         </Link>
         <nav className="navigation">
@@ -73,6 +76,6 @@ function Header({ title, sort, sortValue, onSortChange }) {
       )}
     </header>
   );
-};
+}
 
 export default Header;

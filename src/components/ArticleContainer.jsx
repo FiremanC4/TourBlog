@@ -8,7 +8,6 @@ const ArticleContainer = ({
   isProfile = false,
   onDelete,
 }) => {
-  
   const sortedArticles = Object.entries(articles).sort((a, b) => {
     const [idA, articleA] = a;
     const [idB, articleB] = b;

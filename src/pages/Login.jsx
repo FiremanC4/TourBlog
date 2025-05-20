@@ -30,7 +30,6 @@ const Login = () => {
     setError("");
     setLoading(true);
 
-    
     if (!formData.email || !formData.password) {
       setError("Будь ласка, заповніть всі поля");
       setLoading(false);

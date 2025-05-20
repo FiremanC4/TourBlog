@@ -86,7 +86,6 @@ const CreatePostPage = ({ isEdit = false }) => {
     setError("");
 
     try {
-      
       const newPreviewUrls = files.map((file) => URL.createObjectURL(file));
       setPreviewUrls((prev) => [...prev, ...newPreviewUrls]);
 
@@ -116,10 +115,8 @@ const CreatePostPage = ({ isEdit = false }) => {
 
   const handleRemoveImage = async (index) => {
     try {
-      
       const imageId = uploadedImages[index].id;
 
-      
       setPreviewUrls((prev) => prev.filter((_, i) => i !== index));
       setUploadedImages((prev) => prev.filter((_, i) => i !== index));
       setFormData((prev) => ({
@@ -127,7 +124,6 @@ const CreatePostPage = ({ isEdit = false }) => {
         imageRefs: prev.imageRefs.filter((_, i) => i !== index),
       }));
 
-      
       await deleteImage(imageId);
     } catch (err) {
       console.error("Error removing image:", err);

@@ -358,7 +358,6 @@ export const listenToComments = (articleId, callback) => {
     console.error("WebSocket error:", error);
   };
 
-  // Return cleanup function
   return () => {
     ws.close();
   };
@@ -391,7 +390,6 @@ export const toggleLike = async (articleId) => {
   }
 };
 
-// WebSocket connection cache
 const wsConnections = new Map();
 
 export const listenToLikes = (articleId, callback) => {
@@ -405,7 +403,6 @@ export const listenToLikes = (articleId, callback) => {
   };
 
   const connect = async () => {
-    // Check if we already have a connection for this article
     if (wsConnections.has(articleId)) {
       const existingConnection = wsConnections.get(articleId);
       existingConnection.callbacks.add(callback);
@@ -435,7 +432,7 @@ export const listenToLikes = (articleId, callback) => {
           console.error("WebSocket error:", data.error);
           return;
         }
-        // Notify all callbacks
+
         callbacks.forEach((cb) => cb(data));
       } catch (error) {
         console.error("Error parsing WebSocket message:", error);
@@ -448,7 +445,7 @@ export const listenToLikes = (articleId, callback) => {
 
     ws.onclose = () => {
       wsConnections.delete(articleId);
-      // Try to reconnect after a delay
+
       setTimeout(() => {
         if (callbacks.size > 0) {
           connect();
@@ -456,10 +453,8 @@ export const listenToLikes = (articleId, callback) => {
       }, 5000);
     };
 
-    // Store the connection
     wsConnections.set(articleId, { ws, callbacks });
 
-    // Return cleanup function
     return () => {
       callbacks.delete(callback);
       if (callbacks.size === 0) {

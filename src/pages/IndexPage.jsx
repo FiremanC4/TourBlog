@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import ArticleContainer from "../components/ArticleContainer";
 import SkeletonArticle from "../components/SkeletonArticle";
 import { getArticles } from "../firebase/db";
-import "../styles/main.css"; 
+import "../styles/main.css";
 
 const IndexPage = () => {
   const [sortBy, setSortBy] = useState("id");
