@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import HelpPage from "./pages/HelpPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import ResetPassword from "./pages/ResetPassword";
 import "./styles/main.css";
 import "./styles/header-footer.css";
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/help" element={<HelpPage />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route
             path="/create-post"
             element={

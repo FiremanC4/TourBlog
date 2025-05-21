@@ -118,6 +118,9 @@ const Login = () => {
           <div className="auth-link">
             Немає акаунту? <Link to="/register">Зареєструватися</Link>
           </div>
+          <div className="auth-link">
+            <Link to="/reset-password">Забули пароль?</Link>
+          </div>
         </form>
       </div>
       <Footer />

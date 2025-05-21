@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import axios from "axios";
 import { API_CONFIG } from "../config/api";
@@ -55,9 +56,9 @@ export const getCurrentUserToken = async () => {
   return await auth.currentUser.getIdToken();
 };
 
-// export const doPasswordReset = async (email) => {
-//   return sendPasswordResetEmail(auth, email);
-// };
+export const doPasswordReset = async (email) => {
+  return sendPasswordResetEmail(auth, email);
+};
 
 // export const doPasswordUpdate = async (password) => {
 //   return updatePassword(auth, password);
