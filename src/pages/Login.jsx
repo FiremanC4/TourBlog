@@ -40,7 +40,25 @@ const Login = () => {
       await doSignInWithEmailAndPassword(formData.email, formData.password);
       navigate("/");
     } catch (err) {
-      setError(err.message);
+      let errMsg = err.code
+      if (err.code == "auth/invalid-credential"){
+        errMsg = "Неправильний логін або пароль";
+      } else if (err.code == "auth/user-not-found"){
+        errMsg = "Користувача не знайдено";
+      } else if (err.code == "auth/wrong-password"){
+        errMsg = "Неправильний пароль";
+      } else if (err.code == "auth/too-many-requests"){
+        errMsg = "Забагато запитів. Спробуйте пізніше.";
+      } else if (err.code == "auth/operation-not-allowed"){
+        errMsg = "Ця операція не дозволена";
+      } else if (err.code == "auth/invalid-email"){
+        errMsg = "Неправильний email";
+      } else if (err.code == "auth/user-disabled"){
+        errMsg = "Користувач заблокований";
+      } else if (err.code == "auth/weak-password"){
+        errMsg = "Слабкий пароль";
+      }
+      setError(errMsg);
     } finally {
       setLoading(false);
     }
